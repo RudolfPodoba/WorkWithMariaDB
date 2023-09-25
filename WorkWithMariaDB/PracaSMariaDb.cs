@@ -108,11 +108,11 @@ namespace WorkWithMariaDB
                     b_JeNull = true;
                 }
 
-                // Kontrola správnosti zadania ID.
+                // Kontrola správnosti zadania statusu.
                 if (!(Int32.TryParse(s_Status, out i_StatusParse) || b_JeNull))
                 {
                     // Oznam o zle zadanom čísle.
-                    MessageBox.Show("Zadané ID musí byť číslo!", "POZOR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Zadaný status musí byť číslo!", "POZOR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     // Nastavenie na zadanie statusu.
                     txb_Status.Text = "";
                     txb_Status.Focus();
